@@ -1,0 +1,212 @@
+/* Общие стили для страницы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Lucida Sans", sans-serif;
+  background: #eef3f7;
+  color: #333;
+}
+
+/* header */
+#header {
+  background: linear-gradient(to bottom, #07184e, #0B2374, #092991);
+  box-shadow: 0 15px 20px rgba(11, 35, 116, 0.5);
+  height: 75px;
+  padding: 5px 0 40px 0;
+  text-align: center;
+}
+
+#header h1 {
+  color: #ffffff;
+}
+
+/* sidebar */
+#left-sidebar {
+  background-color: #ffffff;
+  width: 20%; /* увеличена ширина для удобства */
+  height: 100%;
+  padding: 20px;
+  float: left;
+  border-radius: 0 20px 0 20px;
+}
+
+#menu ol {
+  padding-left: 0;
+}
+
+#menu ol li {
+  list-style-type: none;
+}
+
+#menu ol li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  width: 65%;
+  height: 40px;
+  background: linear-gradient(to bottom right, #5668cf, #495cc7, #6a64db, #4c5ea8);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.397);
+}
+
+#menu ol li a:hover {
+  background: linear-gradient(to bottom right, #6C81F8, #6C81F8, #918BF4, #8B9FF0);
+}
+
+#left-sidebar .active {
+  background: #0B2374;
+  border-radius: 5px;
+  color: white;
+}
+
+/* main */
+#main {
+  width: 80%;
+  background: linear-gradient(135deg, #6fb3f0, #b8dffc);
+  margin-left: 20%;
+  min-height: 100%;
+  padding: 30px;
+}
+
+/* Контейнер */
+.container {
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Стили формы */
+form {
+  background: #f9fcff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+.form-title {
+  color: #4a90e2;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Поля ввода */
+.form-control {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Таблица */
+table {
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f5f9fd;
+}
+
+table tr:hover {
+  background-color: #e7f1fd;
+  transition: background-color 0.3s ease;
+}
+
+/* Кнопки */
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 60px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn-primary {
+  background-color: #4a90e2;
+  color: white;
+}
+
+button.btn-primary:hover {
+  background-color: #357ab7;
+  transform: scale(1.05);
+}
+
+button.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button.btn-danger:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  #left-sidebar {
+      width: 100%;
+      padding: 10px;
+  }
+
+  #main {
+      width: 100%;
+      margin-left: 0;
+  }
+
+  .container {
+      padding: 20px;
+  }
+
+  table th, table td {
+      padding: 12px 15px;
+  }
+
+  button {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+}
